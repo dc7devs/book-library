@@ -1,0 +1,25 @@
+{
+  "name": "booklibrary",
+  "version": "1.0.0",
+  "description": "Sistema de gerenciamento de bibliotecas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dc7devs/bookLibrary.git"
+  },
+  "author": "Diego Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dc7devs/bookLibrary/issues"
+  },
+  "homepage": "https://github.com/dc7devs/bookLibrary#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
