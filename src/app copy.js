@@ -55,13 +55,13 @@ app.put("/obras/:id", function(request, response) {
         autores: autores
     }
 
-    const indexObra = obras.findIndex(function(obra) { obra.id == id });
+    const indexObra = obras.findIndex(function(obra) { obra.id == id });                                                                                                        
 
     obras[indexObra] = UppObra;
-    return response.json(UppObra)
+    return response.json(UppObra);
 });
 
-app.delete("/obras/:id", checkId, function(request, response) {
+app.delete("/obras/:id", function(request, response) {
     const { id } = request.params;
     
     const indexObra = obras.findIndex(function(obra) { obra.id == id });
