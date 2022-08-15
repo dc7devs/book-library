@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { uuid, isUuid } = require('uuidv4');
+const { uuid } = require('uuidv4');
 
 app.use(express.json());
 
@@ -13,7 +13,7 @@ function logRequest(request, response, next) {
     console.timeEnd(request.method +" - "+ request.url);
 }
 
-function checkId(request, response, next) {
+function checkId(request, repsonse, next) {
     const { id } = request.params;
 
     if(!isUuid(id)) {

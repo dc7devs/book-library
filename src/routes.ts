@@ -1,5 +1,5 @@
 import express from 'express';
-import { uuid } from 'uuidv4';
+import { uuid, isUuid } from 'uuidv4';
 
 interface Author {
     name: string;
@@ -62,4 +62,13 @@ routes.put('/literary-books/:id', (req, res) => {
     Libry[indexBook] = updateLiteraryBook;
 
     return res.json(updateLiteraryBook);
+});
+
+routes.delete('/literary-books/:id', (req, res) => {
+    const { id } = req.params;
+
+    const indexBook = Libry.findIndex(book => book.id === id);
+    Libry.slice(indexBook, 1);
+
+    return res.status(204).json();
 });
